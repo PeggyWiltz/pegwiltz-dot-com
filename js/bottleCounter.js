@@ -3,14 +3,14 @@ Number.prototype.formatMoney = function(places, symbol, thousand, decimal) {
   symbol = symbol !== undefined ? symbol : "$";
   thousand = thousand || ",";
   decimal = decimal || ".";
-  var number = this, 
+  var number = this,
   negative = number < 0 ? "-" : "",
   i = parseInt(number = Math.abs(+number || 0).toFixed(places), 10) + "",
   j = (j = i.length) > 3 ? j % 3 : 0;
   return symbol + negative + (j ? i.substr(0, j) + thousand : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousand) + (places ? decimal + Math.abs(number - i).toFixed(places).slice(2) : "");
 };  //From http://www.josscrowcroft.com/2011/code/format-unformat-money-currency-javascript/
 
-function getColorClass(colorNum) {  
+function getColorClass(colorNum) {
   var colorClass = 'item__detail--red-wine';
   switch(colorNum) {
     case "1":
@@ -18,17 +18,17 @@ function getColorClass(colorNum) {
       break;
     case "2":
       return 'item__detail--rose-wine';
-      break;   
+      break;
   }
-return colorClass;  
+return colorClass;
 }
 
-function getWineClubMembership(isWineClub) {  
+function getWineClubMembership(isWineClub) {
   var clubClass = '';
   if (isWineClub === "1") {
     clubClass = 'icon-star-empty';
   }
-  return clubClass;  
+  return clubClass;
 }
 
 function getReadyToDrinkClass(isReadyToDrink) {
@@ -100,7 +100,7 @@ function getDeleteBottles(idx, bottleName) {
   function collapseAddForm() {
     $("#form__add-new").toggle();
   }
-  
+
     function collapseDeleteForm() {
     $("#form__delete").toggle();
   }
@@ -109,10 +109,10 @@ $(function() {
   //initially hide forms
   $("#form__add-new").addClass("collapse");
   $("#form__add-new--button").on("click", collapseAddForm);
-  
+
   $("#form__delete").addClass("collapse");
   $("#form__delete--button").on("click", collapseDeleteForm);
-    
+
   var frmPic = $('#form__add-new--pic');
   var frmName =  $('#form__add-new--name');
   var frmNumBottles = $('#form__add-new--num-bottles');
@@ -120,7 +120,7 @@ $(function() {
   $.ajax({
     dataType: 'json',
     type: 'GET',
-    url: 'bottles.json',
+    url: 'json/bottles.json',
     success: function(data) {
       var textToInsert = '';
       var delBottlesText = '';
@@ -139,25 +139,25 @@ $(function() {
   $('#add-new').on('click', function() {
     var bottle = {
       pic: frmPic.val(),
-      name: frmName.val(), 
+      name: frmName.val(),
       bottleCount: frmNumBottles.val()
       /* wineColor: "2",
       wineClub: "0",
-      readyToDrink: "1",      
-      winery: "Balboa", 
-      wineryLoc: "Walla Walla, WA", 
+      readyToDrink: "1",
+      winery: "Balboa",
+      wineryLoc: "Walla Walla, WA",
       varietal: "4% Viognier, 94% Syrah",
       vintage: "2014",
       wherePurchased: "At the winery",
       whenPurchased: "April 2015",
       price: 14.00,
-      notes: "Bought on a trip with Carrie and Chuck." */      
+      notes: "Bought on a trip with Carrie and Chuck." */
     };
 
     $.ajax({
       dataType: 'json',
       type: 'POST',
-      url: 'bottles.json',
+      url: 'json/bottles.json',
       data: bottle,
       success: function(newBottle) {
       $('.bottle-container').append( getBottleHtml(newBottle));
