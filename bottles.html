@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Modular Design</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/state.css">
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+
+<body id="home">
+  <header>
+    <article id="header__text" class="header__text">
+      <section  class="header__title">
+        <h1>Wine Counting</h1>
+      </section>
+      <section class="header__quote">
+        <h2  id="header__quote-body" class="header__quote-body">“I cook with wine, sometimes I even add it to the food.” </h2>
+        <h3 class="header__quote-author">― W.C. Fields</h3>
+      </section>
+    </article>
+    <nav role="navigation" class="menu__bar">
+      <ul id="main-menu" class="menu">
+        <li class="menu__item">
+          <a href="#" class="menu__item--link">Home</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__item--link">Services</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__item--link">Contact Us</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__item--link">About</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <form class="filters">
+    <ul class="filter-menu">
+      <li class="filter-menu__item">
+       <label labelFor="filter-color">Color: </label>
+       <select class="filter-menu__input" id="filter-color" name="color">
+        <option value="red" selected>Red</option>
+        <option value="white">White</option>
+        <option value="rose">Rose</option>
+      </select>
+      </li>
+      <li class="filter-menu__item">
+        <label labelFor="filter-winery">Winery name: </label>
+        <input class="filter-menu__input" type="text">
+      </li>
+      <li class="filter-menu__item">
+        <label labelFor="filter__vintage">Vintage: </label>
+        <input class="filter-menu__input" id="filter__vintage" type="number" placeholder="2015">
+      </li>
+      <li class="filter-menu__item">
+        <button class="filter-menu__button" name="filter-menu__btn" >Filter</button>
+      </li>
+    </ul>
+  </form>
+  <main class="flex-container bottle-container">
+    <!-- icon legend:
+                icon-droplet = wine color (red, white, rose)
+                number = how many bottles we have
+                icon-star-empty = we are wine club members (if present)
+                icon-glass = wine is ready to drink (if present)
+        -->
+        <ul id="bottles"></ul>
+  </main>
+  <footer class="who-is" itemscope itemtype="http://schema.org/Person">
+        <ul class="item__details--icons">
+          <li class="item__details--icon item__detail--icon-large" itemprop="memberOf">
+            <span aria-hidden="true">Facebook</span>
+            <a class="item__details--icon-link--color" href="http://www.facebook.com">
+              <span class="icon-facebook2"></span>
+            </a>
+          </li>
+          <li class="item__details--icon item__detail--icon-large"  itemprop="memberOf">
+            <span aria-hidden="true">Twitter</span>
+            <a class="item__details--icon-link--color" href="http://www.twitter.com">
+              <span class="icon-twitter2"></span>
+            </a>
+          </li>
+          <li class="item__details--icon item__detail--icon-large"  itemprop="memberOf">
+            <span aria-hidden="true">GitHub</span>
+            <a class="item__details--icon-link--color" href="http://www.github.com">
+              <span class="icon-github"></span>
+            </a>
+          </li>
+          <li class="item__details--icon item__detail--icon-large"  itemprop="memberOf">
+            <span aria-hidden="true">LinkedIn</span>
+            <a class="item__details--icon-link--color" href="http://www.linkedIn.com">
+              <span class="icon-linkedin"></span>
+            </a>
+          </li>
+        </ul> 
+        <section class="who-is__personal">
+          <figure class="who-is__pic">
+            <a href="http://www.rosieheffernan.com"><img src="images/pegCartoon.jpg" alt="Me, by Rosie Heffernan" title="Me, by Rosie Heffernan"/></a>
+          </figure>
+          <ul class="who-is__person">
+            <li class="who-is__person-detail" itemprop="name">
+              <span itemprop="givenName">Peggy</span> <span itemprop="familyName">Wiltz</span>
+            </li>
+            <li class="who-is__person-detail" itemprop="jobTitle">
+              Developer
+            </li>
+            <li class="who-is__person-detail" itemprop="telephone">
+              425-344-6681
+            </li>
+            <li class="who-is__person-detail" itemprop="email">
+              hengist2001@hotmail.com
+            </li>
+            <li>
+              <div class="copyright"><small>&copy; Peggy Wiltz 2015</small></div>
+            </li>
+          </ul>
+          </section>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/bottleCounter.js"></script>
+    <script src="js/quote.js"></script>
+</body>
+</html>

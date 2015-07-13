@@ -1,0 +1,25 @@
+body {
+  font-family: Georgia, serif;
+}
+
+article {
+  margin-bottom: 2em;
+}
+.coupon {
+  width: 30em;
+  border: .5em solid #1F5E43;
+  text-align: center;
+  color: #5E2817;
+}
+
+.disclaimer {
+  font-style: italic;
+}
+
+.video-card {
+  height: 500px;
+}
+
+video {
+  width: 300px;
+}
