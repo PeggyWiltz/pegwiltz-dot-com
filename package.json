@@ -1,0 +1,37 @@
+{
+  "name": "peggy-wiltz-dotcom",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeggyWiltz/pegwiltz-dot-com.git"
+  },
+  "author": "Peggy Wiltz",
+  "keywords": [
+    "web development"
+  ],
+  "dependencies": {
+    "angular": "^1.4.3",
+    "angular-route": "^1.4.3",
+    "body-parser": "^1.13.2",
+    "express": "^4.13.1",
+    "jsonwebtoken": "^5.0.4",
+    "node-sass": "^3.2.0",
+    "sass": "^0.5.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-exit": "0.0.2",
+    "gulp-jshint": "^1.11.2",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.2.0",
+    "gulp-webpack": "^1.5.0",
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.0.1",
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.10.5"
+  }
+}
