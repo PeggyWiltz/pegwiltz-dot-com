@@ -1,4 +1,4 @@
-h1 A personal website project
+# A personal website project
 
 When completed this project will 
   *reflect my interests via outside links
