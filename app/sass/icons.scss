@@ -15,6 +15,16 @@ $icon-twitter2: '\ea92';
 $icon-github: '\eab1';
 $icon-linkedin: '\eac8';
 
+$facebook-link-color: blue;
+$twitter-link-color: green;
+$github-link-color: red;
+$linkedin-link-color: orange;
+
+$facebook-link-highlight: lighten($facebook-link-color, 50%);
+$twitter-link-highlight: lighten($twitter-link-color, 50%);
+$github-link-highlight: lighten($github-link-color, 50%);
+$linkedin-link-highlight: lighten($linkedin-link-color, 50%);
+
 %icon-before {
   font-family: $icon-font;
   speak: none;
@@ -40,11 +50,38 @@ $icon-linkedin: '\eac8';
 	padding-bottom: .5em;
 }
 
+.icon-facebook--link {
+	&:hover {
+  	color: $facebook-link-highlight
+	}
+}
+
+.icon-twitter--link {
+	&:hover {
+  	color: $twitter-link-highlight;
+	}
+}
+
+.icon-github--link {
+	&:hover {
+  	color: $github-link-highlight;
+	}
+}
+
+.icon-linkedin--link {
+	&:hover {
+  	color: $linkedin-link-highlight;
+	}
+}
+
 .icon-facebook {
   &:before {
 		@extend %icon-before;
     content: $icon-facebook2;
-		color: blue;
+		color: $facebook-link-color;
+		&:hover {
+	  	color: red;
+		}
   }
 }
 
@@ -52,7 +89,10 @@ $icon-linkedin: '\eac8';
   &:before {
 		@extend %icon-before;
     content: $icon-twitter2;
-		color: green;
+		color: $twitter-link-color;
+	}
+	&:hover {
+		color: $twitter-link-highlight;
 	}
 }
 
@@ -60,37 +100,20 @@ $icon-linkedin: '\eac8';
   &:before {
 		@extend %icon-before;
     content: $icon-github;
-		color: red;
+		color: $github-link-color;
   }
+	&:hover {
+		color: $github-link-highlight;
+	}
 }
 
 .icon-linkedin {
   &:before {
 		@extend %icon-before;
     content: $icon-linkedin;
-		color: orange;
+		color: $linkedin-link-color;
   }
-}
-
-
-  // .icon-facebook2:before
-  //   margin: 1px
-  // 	content: "\ea8d"
-	//
-  // .icon-twitter2:before
-  //   margin: 1px
-  // 	content: "\ea92"
-	//
-  // .icon-github:before
-  //   margin: 1px
-  // 	content: "\eab1"
-	//
-  // .icon-linkedin:before
-  //   margin: 1px
-  // 	content: "\eac8"
-
-.item__details--icon-link,
-.item__details--icon-link--color {
-  color: #000;
-  text-decoration: none;
+	&:hover {
+		color: $linkedin-link-highlight;
+	}
 }
