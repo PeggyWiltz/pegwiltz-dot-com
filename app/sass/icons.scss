@@ -14,16 +14,22 @@ $icon-facebook2: '\ea8d';
 $icon-twitter2: '\ea92';
 $icon-github: '\eab1';
 $icon-linkedin: '\eac8';
+$icon-profile: '\e923';
+$icon-mail: '\ea83';
 
 $facebook-link-color: blue;
 $twitter-link-color: green;
 $github-link-color: red;
 $linkedin-link-color: orange;
+$profile-link-color: brown;
+$mail-link-color: purple;
 
 $facebook-link-highlight: lighten($facebook-link-color, 50%);
 $twitter-link-highlight: lighten($twitter-link-color, 50%);
 $github-link-highlight: lighten($github-link-color, 50%);
 $linkedin-link-highlight: lighten($linkedin-link-color, 50%);
+$profile-link-highlight: lighten($profile-link-color, 50%);
+$mail-link-highlight: lighten($mail-link-color, 50%);
 
 %icon-before {
   font-family: $icon-font;
@@ -74,6 +80,18 @@ $linkedin-link-highlight: lighten($linkedin-link-color, 50%);
 	}
 }
 
+.icon-linkedin--link {
+	&:hover {
+  	color: $linkedin-link-highlight;
+	}
+}
+
+.icon-linkedin--link {
+	&:hover {
+  	color: $linkedin-link-highlight;
+	}
+}
+
 .icon-facebook {
   &:before {
 		@extend %icon-before;
@@ -115,5 +133,27 @@ $linkedin-link-highlight: lighten($linkedin-link-color, 50%);
   }
 	&:hover {
 		color: $linkedin-link-highlight;
+	}
+}
+
+.icon-profile {
+  &:before {
+		@extend %icon-before;
+    content: $icon-profile;
+		color: $profile-link-color;
+  }
+	&:hover {
+		color: $profile-link-highlight;
+	}
+}
+
+.icon-mail {
+  &:before {
+		@extend %icon-before;
+    content: $icon-mail;
+		color: $mail-link-color;
+  }
+	&:hover {
+		color: $mail-link-highlight;
 	}
 }
