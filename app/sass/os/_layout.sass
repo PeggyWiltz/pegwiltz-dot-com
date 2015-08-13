@@ -1,0 +1,66 @@
+%shadow
+  -webkit-box-shadow: 2px 6px 5px 2px rgba(0, 0, 0, 0.5)
+  -moz-box-shadow:    2px 6px 5px 2px rgba(0, 0, 0, 0.5)
+  box-shadow:         2px 6px 5px 2px rgba(0, 0, 0, 0.5)
+
+%column-base
+  height: 100%
+  float: left
+  margin: 3% 2% 2%
+  padding: 1em
+  position: relative
+  @extend %shadow
+
+header
+  left:0
+  margin: 0
+
+.header__banner
+  img
+    left:0
+    height: auto
+    width: 100%
+    margin: 0
+    @extend %shadow
+
+.header__title
+  margin: 0
+  height: 2em
+  padding-left: 1em
+  @extend %shadow
+  h1
+    margin: 0
+
+main
+  margin-top: 2em
+  align: center
+
+#osCol1
+  width: 50%
+  margin-left: 3%
+  @extend %column-base
+
+#osCol2
+  width: 24%
+  margin-left: 1%
+  @extend %column-base
+  ul
+    padding-left: 1%
+
+.os-img
+  width: 40%
+  height: auto
+  margin: 1em
+
+.os-right
+  float: right
+
+.os-left
+  float: left
+
+.os-ctr
+  width: calc(100% - 2em)
+
+.header__title--home
+  a
+    margin-right: 2em

@@ -1,0 +1,43 @@
+$main-background: #95AEC4
+$header-image: url("../../assets/images/oceanShores/sand-texture.jpg") 0 0 repeat
+$header-font-color: darken(#4F6477, 10%)
+$link-color: #776343
+$link-visited-color: darken(#C4B295, 20%)
+$link-hover-color: #DBEEFF
+
+
+body
+  background-color: $main-background
+  background: $header-image
+
+header
+  background-color: $main-background
+  background: $header-image
+
+.header__title
+  background-color: $main-background
+
+.header__banner
+  background: $header-image
+
+#osCol1
+  background-color: $main-background
+
+#osCol2
+  background-color: $main-background
+
+h1, h2, h3, h4, h5, h6
+  color: $header-font-color
+  a
+    color: $link-color
+    &:visited
+      color: $link-visited-color
+    &:hover
+      color: $link-hover-color
+
+a
+  color: $link-color
+  &:visited
+    color: $link-visited-color
+  &:hover
+    color: $link-hover-color
