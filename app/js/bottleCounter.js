@@ -120,7 +120,7 @@ $(function() {
   $.ajax({
     dataType: 'json',
     type: 'GET',
-    url: 'bottles.json',
+    url: '../json/bottles.json',
     success: function(data) {
       var textToInsert = '';
       var delBottlesText = '';
@@ -157,7 +157,7 @@ $(function() {
     $.ajax({
       dataType: 'json',
       type: 'POST',
-      url: 'bottles.json',
+      url: '../json/bottles.json',
       data: bottle,
       success: function(newBottle) {
       $('.bottle-container').append( getBottleHtml(newBottle));

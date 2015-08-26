@@ -38,6 +38,11 @@ gulp.task('assets', function () {
     .pipe(gulp.dest('./public/assets'));
 });
 
+gulp.task('json', function () {
+    return gulp.src('./app/json/**/*')
+    .pipe(gulp.dest('./public/json'));
+});
+
 gulp.task('webpackdev', function() {
   return gulp.src('./app/js/**/*.js')
     .pipe(webpack({
@@ -67,4 +72,4 @@ gulp.task('copy:watch', function () {
   gulp.watch('./app/**/*.html', ['copy']);
 });
 
-gulp.task('build', ['copy', 'webpackdev', 'sass', 'assets' ]);
+gulp.task('build', ['copy', 'webpackdev', 'sass', 'assets', 'json' ]);
