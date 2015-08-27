@@ -1,31 +1,69 @@
-.img-cluster-1
+%imagecluster
   width: 75%
   margin: 0 auto
   height: auto
   margin-top: 4%
 
-.img-1
+%subimageleftfloat
   float: left
-  width: calc(60% - 2%)
   margin: 1%
-  margin-top: 5%
+  margin-top: 3%
 
-.img-2
-  float:left
-  width: calc(40% - 2%)
-  margin: 1%
-  margin-top: 5%
+.img-cluster-1
+  @extend %imagecluster
+  .img-1
+    @extend %subimageleftfloat
+    width: calc(60% - 2%)
+  .img-2
+    @extend %subimageleftfloat
+    width: calc(40% - 2%)
+  .img-3
+    @extend %subimageleftfloat
+    width: calc(40% - 2%)
+    margin-top: .5%
+  .img-4
+    clear: both
+    width: calc(100% - 2%)
+    margin: 1%
 
-.img-3
-  float:left
-  width: calc(40% - 2%)
-  margin: 1%
-  margin-top: .5%
-
-.img-4
-  clear: both
-  width: calc(100% - 2%)
-  margin: 1%
+.img-cluster-2
+  @extend %imagecluster
+  .img-cluster-2-part-1
+    width: 60%
+    float: left
+    margin: 0
+    .img-1
+      float: left
+      width: calc(33.33% - 2%)
+      margin: 1%
+      margin-top: 3%
+    .img-2
+      float:left
+      width: calc(33.33% - 2%)
+      margin: 1%
+      margin-top: 3%
+    .img-3
+      float:left
+      width: calc(33.33% - 2%)
+      margin: 1%
+      margin-top: 3%
+    .img-4
+      clear:both
+      width: calc(100% - 2%)
+      margin: 1%
+      margin-top: 2.5%
+  .img-cluster-2-part-2
+    float: left
+    width: 40%
+    margin: 0
+    .img-5
+      width: calc(100% - 2%)
+      margin: 1%
+      margin-top: 4.5%
+    .img-6
+      width: calc(100% - 2%)
+      margin: 1%
+      margin-top: .5%
 
 .img-caption
   clear: both
