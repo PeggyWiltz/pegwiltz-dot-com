@@ -2,7 +2,7 @@
    "bottles": [
     {
       "id": "1",
-      "pic": "images/bottles/bottle1.JPG",
+      "pic": "../assets/images/bottles/bottle1.JPG",
       "name": "The Conjurer",
       "bottleCount": "1",
       "wineColor": "0",
@@ -19,7 +19,7 @@
       },
     {
       "id": "2",
-      "pic": "images/bottles/bottle2.JPG",
+      "pic": "../assets/images/bottles/bottle2.JPG",
       "name": "Grenache Rose",
       "bottleCount": "3",
       "wineColor": "2",
@@ -36,7 +36,7 @@
       },
       {
       "id": "3",
-      "pic": "images/bottles/bottle3.JPG",
+      "pic": "../assets/images/bottles/bottle3.JPG",
       "name": "Sharilee",
       "bottleCount": "2",
       "wineColor": "0",
@@ -53,7 +53,7 @@
       },
       {
       "id": "4",
-      "pic": "images/bottles/bottle4.JPG",
+      "pic": "../assets/images/bottles/bottle4.JPG",
       "name": "Applegate Valley Gewurz",
       "bottleCount": "2",
       "wineColor": "1",
@@ -70,7 +70,7 @@
       },
        {
       "id": "5",
-      "pic": "images/bottles/bottle5.JPG",
+      "pic": "../assets/images/bottles/bottle5.JPG",
       "name": "Rose of Syrah",
       "bottleCount": "1",
       "wineColor": "2",

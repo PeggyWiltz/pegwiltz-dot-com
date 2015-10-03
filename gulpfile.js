@@ -68,8 +68,18 @@ gulp.task('copy', function() {
   .pipe(minifyHTML(opts))
   .pipe(gulp.dest('./public/'));
 });
+
+gulp.task('copy-css', function() {
+  var opts = {
+    conditionals: true,
+    spare:true
+  };
+
+  return gulp.src('./app/**/*.css')
+  .pipe(gulp.dest('./public/css/plainCss/'))
+});
 gulp.task('copy:watch', function () {
   gulp.watch('./app/**/*.html', ['copy']);
 });
 
-gulp.task('build', ['copy', 'webpackdev', 'sass', 'assets', 'json' ]);
+gulp.task('build', ['copy', 'webpackdev', 'sass', 'assets', 'json', 'copy-css' ]);
