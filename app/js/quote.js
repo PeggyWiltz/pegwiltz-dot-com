@@ -79,9 +79,9 @@ function setQuote () {
 
 window.onload = function () {
     var el = document.getElementById("header__quote-body");
-    if (el.addEventListener) {
-        el.addEventListener("mouseout", setQuote, false);
-    } else {
-        el.attachEvent('onmouseout', setQuote);
-    }
+    //if (el.addEventListener) {
+        //el.addEventListener("mouseout", setQuote, false);
+    //} else {
+        //el.attachEvent('onmouseout', setQuote);
+    //}
 };

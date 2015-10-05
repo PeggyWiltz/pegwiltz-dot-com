@@ -1,9 +1,17 @@
 body {
   background-color: #FCFCFC;
   font-size: 18px;
+  font-family: Bellota, sans-serif
 }
 a {
   color: #FCFCFC;
+}
+.static-anchor:before {
+  display: block;
+  content: " ";
+  margin-top: -121px;
+  height: 121px;
+  visibility: hidden;
 }
 .navbar-header h1 {
   color: #4A4D70;
@@ -27,7 +35,7 @@ a:hover {
   font-size: 24px;
 }
 .line {
-  border-color: #4A4D70;
+  border-color: #FCFCFC;
   border-width: 2px;
   width: 25%;
 }
@@ -43,8 +51,13 @@ a:hover {
   margin-left: 5em;
   width: 300px;
 }
+nav {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
 .nav-bar {
-  border: none;
+  border-bottom: .4em solid #4A4D70;
   background-color: #B0AEA7;
 }
 .navbar-fixed-top {
@@ -72,20 +85,19 @@ a:hover {
   color: #FCFCFC;
 }
 .portfolio {
-  color: #FCFCFC;
+  color: #000000;
   margin-top: 2em;
-  margin-bottom: 2em;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  border-top: solid .75em #B0AEA7;
+}
+.portfolio h1 {
+  color: #4A4D70;
 }
 .portfolio:nth-child(odd) {
-  background-color: #636054;
   animation-delay:0.2s;
   -moz-animation-delay:0.2s;
   -webkit-animation-delay:0.2s;
 }
 .portfolio:nth-child(even) {
-  background-color: #4A4D70;
   animation-delay:0.2s;
   -moz-animation-delay:0.2s;
   -webkit-animation-delay:0.2s;
@@ -97,21 +109,22 @@ a:hover {
   padding: 5% 0;
 }
 .port-text-child {
-  padding: 10% 0;
+  padding: 5% 0;
 }
 .about {
   padding: 3em;
 }
 .footer {
-  background-color: #B0AEA7;
-  color: #4A4D70;
+  background-color: #4A4D70;
+  border-top: solid .4em #B0AEA7;
+  color: #FCFCFC;
   padding: 1em;
 }
 .contact-header {
   margin-bottom: .75em;
 }
 .contact-buttons {
-  margin: 1em;
-  padding: 1em;
+  height: 70px;
+  width: 60px;
   background-color: #A7A8B0;
 }

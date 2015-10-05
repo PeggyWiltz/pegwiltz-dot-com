@@ -13,16 +13,5 @@
       title: '425 Yorkmar, Ocean Shores'
     });
   }
-  // google.maps.event.addDomListener(window, 'load', initMap);
 
 document.addEventListener('load', initMap());
-
-// function initialize() {
-//   var mapCanvas = document.getElementById('map');
-//   var mapOptions = {
-//     center: new google.maps.LatLng(46.957537, -124.166023),
-//     zoom: 8,
-//     mapTypeId: google.maps.MapTypeId.ROADMAP
-//   }
-//   var map = new google.maps.Map(mapCanvas, mapOptions);
-// }

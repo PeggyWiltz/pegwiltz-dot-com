@@ -45,13 +45,14 @@ gulp.task('json', function () {
 
 gulp.task('webpackdev', function() {
   return gulp.src('./app/js/**/*.js')
-    .pipe(webpack({
-      output: {
-        filename: './js/bundle.js'
-      }
-    }))
-    .pipe(uglify())
-    .pipe(gulp.dest('./public/'));
+    // .pipe(webpack({
+    //   output: {
+    //     filename: './js/bundle.js'
+    //   }
+    // }))
+    //.pipe(uglify())
+    //.pipe(gulp.dest('./public/'));
+    .pipe(gulp.dest('./public/js'));
 });
 gulp.task('webpackdev:watch', function () {
   gulp.watch('./app/**/*.js', ['webpackdev']);
