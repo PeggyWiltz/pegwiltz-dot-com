@@ -24,7 +24,16 @@
         </section>
       </header>
       <main>
-        <section id="osCol1">
+        <section id="weather" class="chunk center">
+            <h2 class="os-right weather__element">Local weather right now: </h2>
+            <div class="weather">
+              <h2 class="weather__temp_element" id="degreeType">F</h2>
+              <h2 class="weather__temp_element" id="temp"></h2>
+              <h2 class="description weather__element"></h2>
+              <img class="weather__element" id="weather-icon"/>
+            </div>
+        </section>
+        <section id="osCol1" class="chunk">
           <h1>Our Beach House</h1>
           <h2>About</h2>
           <p>Our cozy beach cabin in Ocean Shores is not fancy but it's clean and
@@ -73,7 +82,7 @@
           <p>We hope your stay is enjoyable, and that you love our cute cabin as much
           as we do!</p>
         </section>
-        <section id="osCol2">
+        <section id="osCol2" class="chunk">
           <h2>What to Do in Ocean Shores</h2>
           <ul>
             <li>
@@ -182,7 +191,7 @@
       </main>
       <footer></footer>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-      <script src="js/map.js"></script>
+      <script src="js/oceanshores.js"></script>
       <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script> -->
     </body>
 </html>

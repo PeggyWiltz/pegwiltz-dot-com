@@ -111,6 +111,12 @@ nav {
 .port-text-child {
   padding: 5% 0;
 }
+.port-text-child a {
+  color: #4A4D70;
+}
+.port-text-child a:hover {
+  color: #4A4D70;
+}
 .about {
   padding: 3em;
 }
