@@ -32,21 +32,9 @@
     width: 60%
     float: left
     margin: 0
-    .img-1
-      float: left
+    .img-1, .img-2, .img-3
+      @extend %subimageleftfloat
       width: calc(33.33% - 2%)
-      margin: 1%
-      margin-top: 3%
-    .img-2
-      float:left
-      width: calc(33.33% - 2%)
-      margin: 1%
-      margin-top: 3%
-    .img-3
-      float:left
-      width: calc(33.33% - 2%)
-      margin: 1%
-      margin-top: 3%
     .img-4
       clear:both
       width: calc(100% - 2%)
@@ -65,6 +53,45 @@
       margin: 1%
       margin-top: .5%
 
+.img-cluster-3
+  @extend %imagecluster
+  .img-1, .img-2, .img-3, .img-4
+    float: left
+    width: calc(50% - 2%)
+    margin: 1%
+  .img-5
+    float: left
+    width: calc(100% - 2%)
+    margin: 1%
+  .img-6, .img-7, .img-8, .img-9
+    float: left
+    width: calc(25% - 2%)
+    margin: 1%
+
+.img-cluster-4
+  @extend %imagecluster
+  .img-1, .img-2, .img-3
+    float: left
+    width: calc(33.33% - 2%)
+    margin: 1%
+  .img-4, .img-5
+    float: left
+    width: calc(50% - 2%)
+    margin: 1%
+
 .img-caption
   clear: both
   margin-left: 12.5%
+  display: inline-block  /* prevent margin collapse */
+  h2
+    &:hover
+      color: gray
+      cursor:pointer
+
+.reset
+  margin-left: 8%
+
+.drop
+  img
+    &:hover
+      width: 100%
